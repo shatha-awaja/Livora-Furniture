@@ -12,6 +12,7 @@
   --dark:#111;
 }
 
+
 *{
   margin:0;
   padding:0;
@@ -66,7 +67,8 @@ img{
   font-weight:600;
   position:relative;
   transition:0.3s;
- right: 100px;
+ right: 120px;
+
 }
 
 /* Home */
@@ -91,17 +93,6 @@ img{
   color: var(--gold) !important;
 }
 
-/* عند مرور الماوس خلي خط تحت النافبار وبلون زي الهزم  */
-/* .nav-link:hover::after{
-  content:"";
-  position:absolute;
-  left:12px;
-  right:12px;
-  bottom:-5px;
-  height:3px;
-  background:var(--gold);
-  border-radius:5px;
-} */
 
 /* كلاس لصورة التايتل والنص الي تحتها */
 .hero-content{
@@ -161,7 +152,10 @@ img{
 .outline-btn:hover{
   transform:scale(1.08);
 }
-
+.main-btn a,
+.outline-btn a{
+  text-decoration: none;
+}
 /* ================= ABOUT ================= */
 /* الاب الكبير ريليتف */
 .about{
@@ -249,6 +243,7 @@ img{
 
 .why-title{
   font-weight: 600;
+  color:black ;
 }
 
 .why-title span{
@@ -629,111 +624,75 @@ img{
 }
 
 /* ================= SOFAS ================= */
-/* ================= SOFAS ================= */
+h1 { color: #d35400; margin-top: 50px; }
 
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
-.sofas-section{
-  background:#f6efe6;
-  min-height:100vh;
-  overflow:hidden;
-  padding:40px 0 80px;
-  position:relative;
-}
+        .swiper-slideServies {
+            width: 350px; /* عرض الكنبة */
+            height: 350px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
 
-.sofa-bg{
-  font-size:150px;
-  font-weight:900;
-  color:#d9b98f;
-  opacity:.8;
-  filter:blur(7px);
-  position:absolute;
-  top:25px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:0;
-}
+        .swiper-slideServies img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.sofa-title{
-  color:#df9130;
-  font-size:38px;
-  font-weight:800;
-  padding-top:145px;
-  position:relative;
-  z-index:2;
-}
+        .view-details-btn {
+            background-color: #d35400;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .sofa {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+      }
 
-.sofaSwiper{
-  width:110%;
-  margin-top:45px;
-  overflow:hidden;
-  position:relative;
-  z-index:2;
-  }
+      .sofa-slide {
+          width: 350px; /* عرض الكنبة */
+          height: 350px;
+          background-position: center;
+          background-size: cover;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
 
+      .sofa-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
 
-/* بدل .swiper-wrapper */
-.sofa-wrapper{
-  align-items:center;
-}
-
-/* بدل .swiper-slide */
-.sofa-slide{
-  width:auto;
-}
-
-.sofa-img{
-  width:330px;
-  height:175px;
-  object-fit:cover;
-  display:block;
-}
-
-/* الميلان زي الصورة */
-.swiper-slide:nth-child(4n+1) .sofa-img{
-  clip-path:polygon(0 0,100% 8%,100% 92%,0 100%);
-}
-
-.swiper-slide:nth-child(4n+2) .sofa-img,
-.swiper-slide:nth-child(4n+3) .sofa-img{
-  clip-path:polygon(0 7%,100% 7%,100% 93%,0 93%);
-}
-
-.swiper-slide:nth-child(4n) .sofa-img{
-  clip-path:polygon(0 8%,100% 0,100% 100%,0 92%);
-}
-
-.view-btn{
-  margin-top:55px;
-  background:#df9130;
-  color:white;
-  font-size:30px;
-  padding:12px 95px;
-  border:0;
-  border-radius:20px;
-  box-shadow:0 4px 8px rgba(0,0,0,.25);
-  position:relative;
-  z-index:3;
-}
-
-@media(max-width:768px){
-  .sofa-bg{
-    font-size:95px;
-  }
-
-  .sofa-title{
-    padding-top:115px;
-  }
-
-  .sofa-img{
-    width:230px;
-    height:145px;
-  }
-
-  .view-btn{
-    font-size:22px;
-    padding:10px 55px;
-  }
-}
+      .view-details-btn {
+          background-color: #d35400;
+          color: white;
+          padding: 15px 50px;
+          border: none;
+          border-radius: 10px;
+          font-size: 18px;
+          margin-top: 30px;
+          cursor: pointer;
+          text-decoration: none;
+      }
 /***********************selllinnng*****/
 .selling{
   background:#f6f2ea;
@@ -836,13 +795,14 @@ img{
 }
 .pay-btn{
   display:block;
-  width:fit-content;
+  width:320px;
+  max-width:90%;
   margin:60px auto 0;
   background:#df9130;
   color:#fff;
   border-radius:18px;
   font-size:34px;
-  padding:12px 120px;
+  padding:12px 0;
   text-decoration:none;
   text-align:center;
 }
@@ -920,7 +880,9 @@ img{
   position:relative;
   overflow:visible;
 }
-
+.download-card button:hover{
+  transform: scale(1.1);
+}
 .download-card h4{
   font-size:26px;
   margin-bottom:2px;
@@ -975,12 +937,14 @@ img{
 .phone{
   position:absolute;
   height:auto;
-  padding-bottom: 80px;
+  padding-bottom:80px;
 }
+
 .phone-box{
   position:relative;
   min-height:430px;
 }
+
 .phone-one{
   width:240px;
   right:230px;
@@ -991,74 +955,54 @@ img{
 .phone-two{
   width:300px;
   right:90px;
-  top: 20px;
+  top:20px;
   z-index:2;
 }
 
-.download-card button:hover{
-  transform:scale(1.2);
-}
-
-
 /* Responsive */
 @media(max-width:992px){
-  .mobiles{
-    text-align:center;
-    padding:60px 0 40px;
-  }
-
-  .download-wrapper{
-    justify-content:center;
+  .phone{
+    position:relative;
+    padding-bottom:0;
   }
 
   .phone-box{
-    min-height:430px;
+    min-height:auto;
     margin-top:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
   }
 
   .phone-one{
-    right:50%;
-    transform:translateX(10%);
+    width:220px;
+    right:auto;
+    top:auto;
+    margin-right:-70px;
   }
 
   .phone-two{
-    right:50%;
-    transform:translateX(70%);
+    width:260px;
+    right:auto;
+    top:auto;
   }
 }
 
 @media(max-width:576px){
-  .mobile-left h1{
-    font-size:30px;
-  }
-
-  .mobile-text{
-    font-size:18px;
-  }
-
-  .download-wrapper{
-    gap:20px;
-  }
-
-  .download-card{
-    width:210px;
-  }
-
   .phone-box{
-    min-height:330px;
+    min-height:auto;
   }
 
   .phone-one{
-    width:200px;
-    top:0;
+    width:170px;
+    margin-right:-55px;
   }
 
   .phone-two{
-    width:240px;
-    top:70px;
+    width:210px;
   }
 }
-
 /* ================= AI SECTION ================= */
 
 .ai-section{
@@ -1603,8 +1547,8 @@ img{
   font-size:58px;
   font-weight:700;
   letter-spacing:12px;
+  color:white;
 }
-
 .social a{
   width:58px;
   height:58px;
@@ -1656,7 +1600,9 @@ img{
   margin-top:15px;
   margin-left: 200px;
 }
-
+.card-bottom{
+  margin-top:10px;
+}
 
 .qr-box img{
   width:100px;
@@ -1696,3 +1642,5 @@ img{
     margin:25px auto 0;
   }
 }
+
+
